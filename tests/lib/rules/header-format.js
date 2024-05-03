@@ -351,9 +351,17 @@ ruleTesterVue.run("header-presence-html", rule, {
       name: "Correctly matches a valid HTML header comment with the correct content",
       filename: "test.vue",
       options: [
-        { source: "string", content: "This is a header", ...enableVueOption },
+        { source: "string", content: "This is a header", ...enableVueOption, blockPrefix: "", blockSuffix: "" },
       ],
       code: "<!--\n  This is a header\n-->\n<template>\n  <div>This is content</div>\n</template>\n",
+    },
+    {
+      name: "Correctly matches a valid HTML header comment including a newline with the correct content",
+      filename: "test.vue",
+      options: [
+        { source: "string", content: "This is\na header", ...enableVueOption, blockPrefix: "", blockSuffix: "" },
+      ],
+      code: "<!--\n  This is\na header\n-->\n<template>\n  <div>This is content</div>\n</template>\n",
     },
     {
       name: "Correctly matches a valid HTML header comment with the correct content when the leading tag is not <template />",

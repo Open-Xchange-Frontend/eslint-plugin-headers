@@ -1,10 +1,10 @@
 {
-  "name": "eslint-plugin-headers",
-  "version": "1.1.2",
+  "name": "@open-xchange/eslint-plugin-headers",
+  "version": "1.2.0-pre2",
   "description": "A flexible and `--fix`able rule for checking, inserting, and formatting file headers.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/robmisasi/eslint-plugin-headers.git"
+    "url": "https://github.com/Open-Xchange-Frontend/eslint-plugin-headers"
   },
   "keywords": [
     "eslint",
